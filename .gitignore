@@ -1,0 +1,25 @@
+# Quarto rendered output
+#docs/
+
+# Quarto caches
+.quarto/
+*_cache/
+# *_files/ — kept so that revealjs and other _files assets are deployed to GitHub Pages
+# Quarto extension
+_extensions/
+
+# Python
+__pycache__/
+*.py[oc]
+.venv/
+
+# Node / npm
+node_modules/
+package-lock.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+/.quarto/
+**/*.quarto_ipynb
