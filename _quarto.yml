@@ -10,35 +10,37 @@ project:
   - "content/**"
   - "!content/slides/**"
   # TODO: Make this dependent on infos from course.yaml
-lang: en
+lang: de
 
 # Import generated navigation — do not edit _quarto-nav.yml by hand.
 metadata-files:
   - _quarto-nav.yml
 
 website:
-  title: "My Course"
-  description: "A subtitle for my course"
+  title: "Argumentlandkarten"
+  description: "Argumente verstehen"
   favicon: ""
 
   navbar:
     background: primary
     search: true
 
-  sidebar: false
+  sidebar: true #false
 
   page-footer:
-    left: "WS 2026 · My University"
+    left: "Argumentlandkarten"
     right: |
-      Built with [Quarto](https://quarto.org)
+      Gebaut mit [Quarto](https://quarto.org)
 
 format:
   html:
     template-partials:
       - assets/partials/title-block.html
     theme:
-      - flatly
-      - assets/styles/custom.scss
+      #- flatly
+      #- assets/styles/custom.scss
+      light: flatly
+      dark: darkly
     toc: true
     toc-depth: 3
   pdf:
