@@ -1,0 +1,7 @@
+---
+title: "About"
+---
+
+# Über das Projekt
+
+Der konstruktive Umgang mit Kontroversen ist eine wichtige Qualifikation für Studierende. Dieses Projekt soll Lehrinhalte und -konzepte entwickeln, mit denen Studierende Kompetenzen in der konstruktiven Begleitung von Kontroversen erwerben und trainieren können. Sie üben sich darin, relevante Argumente und deren Beziehungen zueinander zu analysieren, sie angemessen darzustellen und solche Darstellungen konstruktiv in den weiteren Verständigungs- und Lösungsprozess einzubringen. Dazu soll die Methode der Argumentlandkarten genutzt werden (Argument Mapping): Grafiken mit Aussagen und Argumenten, die durch grüne Pfeile (Begründung) und rote Pfeile (Kritik) vernetzt sind. Die Studierenden sollen einüben, Argumentlandkarten zu entwerfen, im Dialog mit den Beteiligten zu evaluieren und zu überarbeiten und sie schließlich konstruktiv in die Unterstützung der Entscheidungs- und Lösungsfindung einzubringen. Das Projekt soll dazu (1) allgemeine und transferierbare Open Educational Resources (OER) sowie (2) spezifische Konzepte für deren Einsatz in verschiedenen Lehr- und Lernformaten entwickeln und erproben. Dazu gehören fachliche Veranstaltungen in der Philosophie, Veranstaltungen zu interdisziplinären Themen für Studierende aller Fächer sowie Bürger:innenbeteiligungs-Seminare zu öffentlichen Kontroversen, in denen interessierte Personen im Sinne der partizipativen Wissenschaftskommunikation in Diskussionsrunden eingebunden werden, die Studierende konstruktiv begleiten.
