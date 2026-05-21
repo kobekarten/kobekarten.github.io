@@ -1,6 +1,4 @@
 [project]
 name = "course"
 requires-python = ">=3.11"
-dependencies = [
-    "quarto-coursegen>=0.1",
-]
+version = "1"
