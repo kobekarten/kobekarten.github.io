@@ -13,8 +13,8 @@ project:
 lang: de
 
 # Import generated navigation — do not edit _quarto-nav.yml by hand.
-metadata-files:
-  - _quarto-nav.yml
+#metadata-files:
+#  - _quarto-nav.yml
 
 website:
   title: "Argumentlandkarten"
@@ -24,16 +24,24 @@ website:
   navbar:
     background: primary
     search: true
+    left:
+      - text: "Home"
+        href: index.qmd
+      - content/about.qmd
+      - content/team.qmd
 
-  sidebar: true #false
+  #sidebar: true #false
 
   page-footer:
-    left: "Argumentlandkarten"
-    right: |
-      Gebaut mit [Quarto](https://quarto.org)
+    left: 
+      - "Argumentlandkarten"
+    right:
+      - content/impressum.qmd
+      - text: 'Gebaut mit <a href="https://quarto.org">Quarto</a>'
 
 format:
   html:
+    respect-user-color-scheme: true
     template-partials:
       - assets/partials/title-block.html
     theme:
@@ -41,12 +49,12 @@ format:
       #- assets/styles/custom.scss
       light: flatly
       dark: darkly
-    toc: true
+    #toc: true    #für kurze Seiten eigentlich nicht nötig
     toc-depth: 3
-  pdf:
+  #pdf:
     # Required for the LaTeX svg package to call Inkscape when converting
     # inline SVG images produced by the argdown-filter (mode: inline, format: svg).
-    pdf-engine-opt: "-shell-escape"
+    #pdf-engine-opt: "-shell-escape"
 
 execute:
   freeze: auto

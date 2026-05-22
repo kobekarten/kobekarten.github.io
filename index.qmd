@@ -7,7 +7,7 @@ institute: "Institute of Something"
 email: "jane.smith@university.edu"
 course: "My Course"
 term: "WS 2026"
-lang: "en"
+lang: "de"
 format:
   html: default
   pdf:
