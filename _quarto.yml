@@ -51,10 +51,10 @@ format:
       dark: darkly
     #toc: true    #für kurze Seiten eigentlich nicht nötig
     toc-depth: 3
-  #pdf:
+  pdf:
     # Required for the LaTeX svg package to call Inkscape when converting
     # inline SVG images produced by the argdown-filter (mode: inline, format: svg).
-    #pdf-engine-opt: "-shell-escape"
+    pdf-engine-opt: "-shell-escape"
 
 execute:
   freeze: auto
