@@ -36,7 +36,7 @@ assignments:
 	quarto render content/assignments/
 
 # Render everything
-all: website slides slides-pdf
+all: website
 
 # Delete rendered output
 clean:
