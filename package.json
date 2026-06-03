@@ -10,8 +10,7 @@
   "dependencies": {
     "@argdown/cli": "*",
     "@argdown/pandoc-filter": "*",
-    "@argdown/image-export": "*",
-    "decktape": "*"
+    "@argdown/image-export": "*"
   },
   "keywords": [
     "quarto",
