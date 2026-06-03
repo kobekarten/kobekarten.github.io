@@ -1,5 +1,7 @@
 ---
 title: Impressum
+format: 
+  html: default
 ---
 
 <!-- Hier Datenschutzbeauftrage, Verantwortliche eintragen, pot. Abstimmung mit Datenschutzbeauftragten PhilFak

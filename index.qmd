@@ -1,94 +1,13 @@
 ---
-title: "Argumentlandkarten"
-subtitle: "Kontroversen begleiten mit Argumentlandkarten"
-#author: "Prof. Jane Smith"
-organization: "HHU Düsseldorf"
-institute: "Institut für Philosophie"
-email: "argumentelandschaften@hhu.de"	#?
-#course: "My Course"
-#term: "WS 2026"
-lang: "de"
-
-format:
-  html:
-    argdown:
-      mode: web-component
-      sourceHighlighter: web-component
-      config: argdown.config.json
-  pdf:
-    documentclass: article
-    pdf-engine-opt: "-shell-escape"
-    papersize: a4
-    toc: false
-    include-in-header: ./assets/latex/_handout-packages.tex
-    template-partials:
-      - ./assets/latex/before-body.tex
-    syntax-definitions:
-      - ./assets/pandoc/argdown.xml
-    syntax-highlighting: ./assets/pandoc/argdown.theme
-filters:
-  - ./node_modules/.bin/argdown-filter
-argdown:
-  mode: inline
-  format: svg
-  config: argdown.config.json
-
-#format:
-#  html: default
-#  pdf:
-#    documentclass: article
-#    papersize: a4
-#    toc: false
-#    include-in-header: assets/latex/_handout-packages.tex
-#    template-partials:
-#      - assets/latex/before-body.tex
+title: "Das Projekt"
+format: 
+  html: default
 ---
 
-## Herzlichen Willkommen
+# Über das Projekt
 
- Was soll eigentlich dieses ganze Gerumgeargumentiere?
- Schauen Sie sich lieber mal eine ordentliche Karte an:
+Der konstruktive Umgang mit Kontroversen ist eine wichtige Qualifikation für Studierende. Dieses Projekt soll Lehrinhalte und -konzepte entwickeln, mit denen Studierende Kompetenzen in der konstruktiven Begleitung von Kontroversen erwerben und trainieren können. Sie üben sich darin, relevante Argumente und deren Beziehungen zueinander zu analysieren, sie angemessen darzustellen und solche Darstellungen konstruktiv in den weiteren Verständigungs- und Lösungsprozess einzubringen. Dazu soll die Methode der Argumentlandkarten genutzt werden (Argument Mapping): Grafiken mit Aussagen und Argumenten, die durch grüne Pfeile (Begründung) und rote Pfeile (Kritik) vernetzt sind. Die Studierenden sollen einüben, Argumentlandkarten zu entwerfen, im Dialog mit den Beteiligten zu evaluieren und zu überarbeiten und sie schließlich konstruktiv in die Unterstützung der Entscheidungs- und Lösungsfindung einzubringen. Das Projekt soll dazu (1) allgemeine und transferierbare Open Educational Resources (OER) sowie (2) spezifische Konzepte für deren Einsatz in verschiedenen Lehr- und Lernformaten entwickeln und erproben. Dazu gehören fachliche Veranstaltungen in der Philosophie, Veranstaltungen zu interdisziplinären Themen für Studierende aller Fächer sowie Bürger:innenbeteiligungs-Seminare zu öffentlichen Kontroversen, in denen interessierte Personen im Sinne der partizipativen Wissenschaftskommunikation in Diskussionsrunden eingebunden werden, die Studierende konstruktiv begleiten.
 
-```argdown-map
-===
-webComponent:
-    withoutHeader: false
-    views:
-        map: true
-color:
-    colorScheme: iwanthue-colorblind-friendly
-    relationColors:
-        support: "#3CB371"
-===
-[FSM is a religion]: Pastafarianism qualifies as a religion for legal purposes.
 
-<Sincere belief argument>
-
-(1) A belief system constitutes a religion if its adherents sincerely hold its tenets
-    and bear costs for those beliefs.
-(2) Some Pastafarians hold the tenets sincerely and have borne costs for their identity.
-----
-(3) [FSM is a religion]
-
-<Parody objection>
-
-(1) A belief system designed as parody cannot be sincerely held.
-(2) Pastafarianism was designed as parody.
-----
-(3) Pastafarianism does not qualify as a religion.
-
-[FSM is a religion]
-  - <Parody objection>
-
-<Parody-sincerity response>
-
-(1) A belief system may originate as satire yet be adopted sincerely by later adherents.
-(2) The sincerity criterion applies to current believers, not to the founder's intent.
-----
-(3) Premise (1) of the parody objection is false.
-
-<Parody objection>
-  - <Parody-sincerity response>
-```
 
 

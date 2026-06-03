@@ -25,12 +25,16 @@ website:
     background: primary
     search: true
     left:
-      - text: "Home"
+      - text: "Das Projekt"
         href: index.qmd
-      - content/about.qmd
-      - content/team.qmd
-
-  #sidebar: true #false
+      - text: "Das Team"
+        href: content/team.qmd
+      - text: "Themen & Bausteine"
+        menu:
+          - text: "Baukasten Argumentkartierung"
+            href: content/baukasten_argumentkartierung.qmd
+          - text: "Grundlagenseminare"
+            href: content/grundlagenseminare.qmd
 
   page-footer:
     left: 
@@ -45,16 +49,32 @@ format:
     template-partials:
       - assets/partials/title-block.html
     theme:
-      #- flatly
-      #- assets/styles/custom.scss
       light: flatly
       dark: darkly
-    #toc: true    #für kurze Seiten eigentlich nicht nötig
     toc-depth: 3
+    argdown:
+      mode: web-component
+      sourceHighlighter: web-component
+      config: argdown.config.json
   pdf:
-    # Required for the LaTeX svg package to call Inkscape when converting
-    # inline SVG images produced by the argdown-filter (mode: inline, format: svg).
+    documentclass: article
     pdf-engine-opt: "-shell-escape"
+    papersize: a4
+    toc: false
+    include-in-header: assets/latex/_handout-packages.tex
+    template-partials:
+      - assets/latex/before-body.tex
+    syntax-definitions:
+      - assets/pandoc/argdown.xml
+    syntax-highlighting: assets/pandoc/argdown.theme
 
 execute:
   freeze: auto
+
+filters:
+  - ./node_modules/.bin/argdown-filter
+  
+argdown:
+  mode: inline
+  format: svg
+  config: argdown.config.json

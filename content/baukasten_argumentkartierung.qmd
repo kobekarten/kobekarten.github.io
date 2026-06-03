@@ -1,0 +1,58 @@
+---
+title: "Argumentlandkarten"
+subtitle: "Kontroversen begleiten mit Argumentlandkarten"
+#author: "Prof. Jane Smith"
+organization: "HHU Düsseldorf"
+institute: "Institut für Philosophie"
+email: "argumentelandschaften@hhu.de"	#?
+format:
+  html: default
+  pdf: default
+---
+
+
+Als Beispiel, dass Argdown Web-Komponenten unterstützt werden ... hier eine Argumentlandkarte zum Thema "Ist das Fliegende Spaghettimonster eine Religion?".
+
+```argdown-map
+===
+webComponent:
+    withoutHeader: false
+    views:
+        map: true
+color:
+    colorScheme: iwanthue-colorblind-friendly
+    relationColors:
+        support: "#3CB371"
+===
+[FSM is a religion]: Pastafarianism qualifies as a religion for legal purposes.
+
+<Sincere belief argument>
+
+(1) A belief system constitutes a religion if its adherents sincerely hold its tenets
+    and bear costs for those beliefs.
+(2) Some Pastafarians hold the tenets sincerely and have borne costs for their identity.
+----
+(3) [FSM is a religion]
+
+<Parody objection>
+
+(1) A belief system designed as parody cannot be sincerely held.
+(2) Pastafarianism was designed as parody.
+----
+(3) Pastafarianism does not qualify as a religion.
+
+[FSM is a religion]
+  - <Parody objection>
+
+<Parody-sincerity response>
+
+(1) A belief system may originate as satire yet be adopted sincerely by later adherents.
+(2) The sincerity criterion applies to current believers, not to the founder's intent.
+----
+(3) Premise (1) of the parody objection is false.
+
+<Parody objection>
+  - <Parody-sincerity response>
+```
+
+
