@@ -55,7 +55,7 @@ format:
     argdown:
       mode: web-component
       sourceHighlighter: web-component
-      config: argdown.config.json
+      #config: argdown.config.json
   pdf:
     documentclass: article
     pdf-engine-opt: "-shell-escape"
@@ -71,8 +71,8 @@ format:
 execute:
   freeze: auto
 
-filters:
-  - ./node_modules/.bin/argdown-filter
+#filters:
+#  - ./node_modules/.bin/argdown-filter
   
 argdown:
   mode: inline
