@@ -1,14 +1,22 @@
 {
-  "name": "my-course",
+  "name": "kobekarten-website",
   "version": "1.0.0",
-  "description": "Quarto course website",
-  "scripts": {},
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
+  "description": "Static website for the Kobekarten project - Kontroversen begleiten mit Argumentlandkarten",
+  "private": true,
+  "scripts": {
+    "render": "quarto render",
+    "preview": "quarto preview"
+  },
   "dependencies": {
-    "@argdown/cli": "^1.7.5",
-    "@argdown/image-export": "^1.7.5",
-    "@argdown/pandoc-filter": "^1.7.7"
-  }
+    "@argdown/cli": "*",
+    "@argdown/pandoc-filter": "*",
+    "@argdown/image-export": "*",
+    "decktape": "*"
+  },
+  "keywords": [
+    "quarto",
+    "argdown",
+    "education"
+  ],
+  "license": "SEE LICENSE FILE"
 }
