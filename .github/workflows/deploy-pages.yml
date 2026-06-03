@@ -1,0 +1,81 @@
+name: Deploy Website to GitHub Pages
+
+on:
+  # Runs on pushes to main branch
+  push:
+    branches: ["main"]
+  
+  # Allows manual trigger from Actions tab
+  workflow_dispatch:
+
+# Sets permissions for GitHub Pages deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install Node dependencies (Argdown)
+        run: |
+          npm install @argdown/cli
+          npm install @argdown/pandoc-filter
+          npm install @argdown/image-export
+
+      # Install system dependencies for PDF rendering and Decktape/Chrome
+      # - Inkscape: converts SVG to PDF for Argdown maps in LaTeX documents
+      # - librsvg2-bin: rsvg-convert for SVG processing
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            inkscape \
+            librsvg2-bin \
+
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: '1.5.57'
+          tinytex: true  # Use TinyTeX for automatic LaTeX package installation (e.g., fontawesome6)
+      #TODO: do we use this?
+      - name: Install Quarto extensions
+        run: |
+          quarto add quarto-ext/fontawesome --no-prompt
+
+      - name: Render Quarto website
+        run: |
+          quarto render
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'docs/'
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    runs-on: ubuntu-latest
+    needs: build
+    
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
