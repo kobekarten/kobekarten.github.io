@@ -1,0 +1,56 @@
+.dropdown-toggle .menu-text{
+	padding-left: 1rem;
+}
+
+.dropdown-toggle::after {
+  position: absolute;
+  left: 0.5rem;     
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  transform-origin: center;
+  transition: transform 0.35s cubic-bezier(.2,.8,.2,1), opacity 0.2s;
+  display: inline-block;
+}
+
+.dropdown-toggle.show::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.dropdown-toggle .icon-caret {
+  position: absolute;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  transform-origin: center;
+  transition: transform 0.35s cubic-bezier(.2,.8,.2,1);
+  pointer-events: none;
+}
+
+.dropdown-menu {
+  opacity: 0;
+  transform: rotateX(-15deg) scale(0.98);
+  pointer-events: none;
+}
+
+.dropdown.show .dropdown-menu,
+.dropdown-menu.show {
+  opacity: 1;
+  pointer-events: auto;
+  animation: rotate 0.45s ease-in-out forwards;
+}
+
+@keyframes rotate {
+  0% {
+    opacity: 0;
+    transform: rotateX(-30deg) scale(0.96);
+  }
+  60% {
+    opacity: 1;
+    transform: rotateX(10deg) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg) scale(1);
+  }
+}
+

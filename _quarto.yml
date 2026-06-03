@@ -31,12 +31,20 @@ website:
   page-footer:
     left: 
       - "Argumentlandkarten"
+    center: |
+      | <a href="https://stiftung-hochschullehre.de">
+          <img src="https://stiftung-hochschullehre.de/wp-content/uploads/2023/03/Logo_Stiftung_Hochschullehre.svg" alt="Sponsorenicon" width="30%" height="30%" />
+        </a>
     right:
-      - content/impressum.qmd
+      - text: "Datenschutz"
+        href: https://www.hhu.de/datenschutzerklaerung
+      - text: "Impressum"
+        href: https://www.hhu.de/impressum
       - text: 'Gebaut mit <a href="https://quarto.org">Quarto</a>'
 
 format:
   html:
+    css: menu_anim.css
     respect-user-color-scheme: true
     template-partials:
       - assets/partials/title-block.html
