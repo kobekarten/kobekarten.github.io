@@ -1,0 +1,167 @@
+---
+pagetitle: "Argumentkarten – Kontroversen konstruktiv begleiten"
+page-layout: full
+toc: false
+lang: de
+filters:
+  - ./node_modules/.bin/argdown-filter
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    argdown:
+      mode: web-component
+      sourceHighlighter: web-component
+      config: argdown.config.json
+---
+
+<style>
+/* All styles scoped under .landing so nothing leaks into other pages.
+   Colors use Bootstrap theme variables → adapts to light (flatly) / dark (darkly). */
+.landing { --accent: #18bc9c; }
+
+.landing-hero {
+  background: linear-gradient(135deg, var(--bs-primary, #2c3e50), var(--accent));
+  color: #fff;
+  border-radius: 1rem;
+  padding: clamp(2.5rem, 6vw, 5rem) 1.5rem;
+  text-align: center;
+  margin: 1rem 0 3rem;
+}
+.landing-hero h1 {
+  color: #fff;
+  font-weight: 800;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 1rem;
+  border: none;
+}
+.landing-hero .lead {
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  opacity: .95;
+}
+.landing-hero .btn { margin: .3rem; }
+
+.landing-container { max-width: 1080px; margin-inline: auto; }
+
+.landing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+}
+.landing-card {
+  border: 1px solid var(--bs-border-color, #dee2e6);
+  border-radius: .85rem;
+  padding: 1.75rem;
+  background: var(--bs-body-bg);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.landing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 .75rem 1.5rem rgba(0, 0, 0, .12);
+}
+.landing-card h3 { margin-top: 0; color: var(--bs-primary); border: none; }
+.landing-card .icon { font-size: 2.25rem; display: block; margin-bottom: .5rem; }
+
+.landing-map {
+  border: 1px solid var(--bs-border-color, #dee2e6);
+  border-radius: .85rem;
+  padding: 1rem;
+  margin: 2rem 0;
+  background: var(--bs-body-bg);
+}
+
+.landing-cta {
+  text-align: center;
+  padding: 3rem 1rem;
+  margin-top: 3rem;
+  border-top: 3px solid var(--accent);
+}
+</style>
+
+:::: {.landing}
+
+::: {.landing-hero}
+# Argumentkarten
+
+::: {.lead}
+Kontroversen konstruktiv begleiten – mit interaktiven Argumentkarten für Lehre, Studium und öffentliche Debatte.
+:::
+
+[Mehr erfahren](#worum-es-geht){.btn .btn-light .btn-lg}
+[Baukasten ansehen](content/baukasten_argumentkartierung.qmd){.btn .btn-outline-light .btn-lg}
+:::
+
+::: {.landing-container}
+
+## Worum es geht {#worum-es-geht}
+
+Der konstruktive Umgang mit Kontroversen ist eine zentrale Qualifikation im Studium der Philosophie. Das Projekt entwickelt Lehrkonzepte und offene Bildungsmaterialien (OER), mit denen Studierende lernen, relevante Argumente und ihre Beziehungen zu analysieren, sie als Argumentkarten darzustellen und konstruktiv in Verständigungs- und Lösungsprozesse einzubringen. Zum Einsatz kommen die Karten in Veranstaltungen der Philosophie, in interdisziplinären Formaten für Studierende aller Fächer sowie in Bürger:innenbeteiligungs-Seminaren zu öffentlichen Kontroversen.
+
+::: {.landing-cards}
+
+::: {.landing-card}
+[]{.icon}🗺️
+
+### Methode
+Argumentkarten machen Gründe und Gegengründe sichtbar.
+
+[Zum Baukasten →](content/baukasten_argumentkartierung.qmd)
+:::
+
+::: {.landing-card}
+[]{.icon}📚
+
+### Seminare
+Grundlagenseminare vermitteln, wie man Kontroversen analysiert, kartiert und im Dialog konstruktiv begleitet.
+
+[Zu den Seminaren →](content/grundlagenseminare.qmd)
+:::
+
+::: {.landing-card}
+[]{.icon}🎯
+
+### Projekt & Team
+Offene Bildungsmaterialien in mehreren Formaten – und die Menschen, die dahinterstehen.
+
+[Zum Team →](content/team.qmd)
+:::
+
+:::
+
+## Ein Blick in eine Argumentkarte
+
+So sieht die Methode in Aktion aus – du kannst oben an der Karte zwischen Grafik und Quelltext umschalten:
+
+```argdown-map
+===
+webComponent:
+    withoutHeader: false
+    initialView: map
+    withoutZoom: true
+    views:
+        source: true
+        map: true
+color:
+    colorScheme: iwanthue-colorblind-friendly
+    relationColors:
+        support: "#3CB371"
+===
+[Karten helfen]: Argumentkarten machen Kontroversen nachvollziehbar.
+    + <Struktur>: Sie zeigen, welche Gründe eine These stützen oder angreifen.
+    + <Überblick>: Komplexe Debatten werden auf einen Blick erfassbar.
+    - <Aufwand>: Gute Karten zu erstellen erfordert Übung – genau das übt man hier.
+```
+
+::: {.landing-cta}
+### Bereit, tiefer einzusteigen?
+
+[Baukasten Argumentkartierung](content/baukasten_argumentkartierung.qmd){.btn .btn-primary .btn-lg}
+:::
+
+:::
+
+::::
