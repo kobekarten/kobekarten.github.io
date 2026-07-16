@@ -3,8 +3,8 @@ pagetitle: "Argumentkarten – Kontroversen konstruktiv begleiten"
 page-layout: full
 toc: false
 lang: de
-filters:
-  - ./node_modules/.bin/argdown-filter
+#filters:
+#  - ./node_modules/.bin/argdown-filter
 format:
   html:
     theme:

@@ -5,6 +5,8 @@ project:
   render:
   - "index.qmd"
   - "content/**"
+  resources:
+    - js/argmap-backdrop.js          # ensure it's copied into _site/js/
 lang: de
 
 
@@ -21,6 +23,8 @@ website:
         href: index.qmd
       - text: "Das Team"
         href: content/team.qmd
+      - text: "Mariam-1"
+        href: content/index-mariam_1.qmd
       - text: "Themen & Bausteine"
         menu:
           - text: "Baukasten Argumentkartierung"
@@ -56,6 +60,50 @@ format:
       mode: web-component
       sourceHighlighter: web-component
       config: argdown.config.json
+    include-in-header:
+      text: |
+        <style>
+          /* body becomes a stacking context, so a -1 layer sits behind the
+             content but ABOVE the theme background — no background overrides */
+          body { position: relative; z-index: 0; }
+          #amb-page {
+            position: fixed; inset: 0;
+            z-index: -1; pointer-events: none;
+            color: #2b3a4a;                 /* nodes read this via currentColor */
+          }
+          body.quarto-dark #amb-page { color: #9fb3c8; }
+        </style>
+    include-after-body:
+      text: |
+        <div id="amb-page" aria-hidden="true"></div>
+        <script src="/js/argmap-backdrop.js"></script>
+        <script>
+          (function () {
+            var host = document.getElementById('amb-page');
+            if (!host) return;
+            var inst = null, wasDark = null;
+            function draw() {
+              var dark = document.body.classList.contains('quarto-dark');
+              if (dark === wasDark) return;
+              wasDark = dark;
+              if (inst) inst.destroy();
+              inst = ArgmapBackdrop.mount(host, {
+                opacity: dark ? .20 : .15,
+                preserveAspectRatio: 'xMidYMid meet',
+                width: 1600, height: 900,
+                nodeW: [86, 130], nodeH: [30, 40],   // bigger boxes
+                rowGap: 130,                          // shorter arrows
+                maxNodes: 16, maxDepth: 4,
+                growEvery: 1300, loop: true,
+                colors: dark ? { support: '#4fd18b', attack: '#ff7a6b' }
+                             : { support: '#2f8f5b', attack: '#cf4b3e' }
+              });
+            }
+            draw();
+            new MutationObserver(draw).observe(document.body,
+              { attributes: true, attributeFilter: ['class'] });
+          })();
+        </script>
   pdf:
     documentclass: article
     pdf-engine-opt: "-shell-escape"
