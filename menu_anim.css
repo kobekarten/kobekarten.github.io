@@ -54,3 +54,13 @@
   }
 }
 
+
+.footer-logo-svg,
+.footer-logo-png {
+  height: 70px;
+}
+
+body.quarto-dark .footer-logo-svg,
+body.quarto-dark .footer-logo-png {
+  filter: brightness(0) invert(1);
+}

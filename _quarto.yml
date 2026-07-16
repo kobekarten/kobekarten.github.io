@@ -36,9 +36,7 @@ website:
     left: 
       - "Argumentlandkarten"
     center: |
-      Gefördert von
-               [![](https://stiftung-hochschullehre.de/wp-content/uploads/2023/03/Logo_Stiftung_Hochschullehre.svg){aria-label="Stifung Hochschullehre" fig-alt="Stifung Hochschullehre" width=30%}](https://stiftung-hochschullehre.de)
-
+      Gefördert von <a href="https://stiftung-hochschullehre.de" target="_blank" rel="noopener" class="footer-logo-link"><img src="content/images/Logo_Stiftung_Hochschullehre.svg" alt="Stiftung Hochschullehre" class="footer-logo-svg"></a> <a href="https://hhu.de" target="_blank" rel="noopener" class="footer-logo-png-link"><img src="content/images/hhu_logo_transparent.png" alt="HHU" class="footer-logo-png"></a>
     right:
       - text: "Datenschutz"
         href: https://www.hhu.de/datenschutzerklaerung
