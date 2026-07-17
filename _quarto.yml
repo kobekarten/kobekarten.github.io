@@ -86,7 +86,7 @@ format:
               wasDark = dark;
               if (inst) inst.destroy();
               inst = ArgmapBackdrop.mount(host, {
-                opacity: dark ? .20 : .15,
+                opacity: dark ? .30 : .30,
                 preserveAspectRatio: 'xMidYMid meet',
                 width: 1600, height: 900,
                 nodeW: [86, 130], nodeH: [30, 40],   // bigger boxes
